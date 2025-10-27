@@ -16,6 +16,6 @@ I then stayed with neuronal networks for some time doing some minor projects, li
 
 One day during my studies, I had a lesson on systems analysis and theory and the professor that held it, was a seasoned automation engineer by heart. I can still recall his face when he ranted on neuronal networks being just matrix multiplication and a bunch of PID controllers in a row. And how this is well known since the early 20th century. Just do the math!
 
-Well, if I had known that he was totally right, but not as he meant to be.
+Well, if I had known that he was totally right, but not as he probably thought.
 
 To be continued...
