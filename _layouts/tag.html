@@ -7,8 +7,8 @@ layout: base
     <h1>Posts tagged "{{ page.tag }}"</h1>
   </header>
 
-  {% assign posts = site.tags[page.tag] | sort: 'date' | reverse %} {% if posts
-  and posts.size > 0 %}
+  {% assign tag_posts = site.tags[page.tag] %} {% if tag_posts and
+  tag_posts.size > 0 %} {% assign posts = tag_posts | sort: 'date' | reverse %}
   <ol class="posts">
     {% for post in posts %}
     <li>
@@ -29,4 +29,21 @@ layout: base
   {% else %}
   <p>No posts found for this tag.</p>
   {% endif %}
+
+  <nav class="tag-cloud">
+    <h3>Other tags</h3>
+    <ul>
+      {% assign all_tags = site.tags | sort_natural: 'first' %} {% for t in
+      all_tags %} {% assign tag_name = t[0] %}
+      <li>
+        <a
+          href="{{ '/tag/' | append: tag_name | slugify | append: '/' | relative_url }}"
+          rel="tag"
+          >{{ tag_name }}</a
+        >
+        ({{ t[1].size }})
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </main>
