@@ -44,23 +44,76 @@ hr {
   opacity: 0.3;
 }
 
-/* Tag badges */
-.post-tags {
-  margin-left: 0.6em;
-  font-size: 0.9em;
-  color: #666;
+/* Post list and tag styles (Minima-like) */
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  padding: 0;
 }
-.post-tags a {
+
+.post-list > li {
+  margin-bottom: 30px;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #828282;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+.post-tags {
   display: inline-block;
-  padding: 0.15em 0.5em;
-  margin-right: 0.25em;
-  background: #f1f1f1;
-  color: #333;
+  margin-left: 0.5em;
+}
+
+.post-tags a {
+  color: #2a7ae2;
+  text-decoration: none;
+  margin: 0 0.2em;
+}
+
+.post-tags a:hover {
+  text-decoration: underline;
+}
+
+/* Tag cloud styles */
+.tag-cloud {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #eee;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.tag-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3em 0.8em;
+  background: #f5f5f5;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.85em;
+  color: #333;
+  font-size: 0.9em;
 }
-.post-tags a:hover {
+
+.tag-link:hover {
   background: #e2e8f0;
   color: #0b63a8;
+}
+
+.tag-count {
+  margin-left: 0.4em;
+  font-size: 0.85em;
+  color: #666;
 }
