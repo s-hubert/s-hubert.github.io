@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: default
 ---
 
 <main id="site-main" class="site-main">
@@ -36,8 +36,9 @@ layout: base
       {% assign all_tags = site.tags | sort_natural: 'first' %} {% for t in
       all_tags %} {% assign tag_name = t[0] %}
       <li>
+        {%- assign tag_slug = tag_name | slugify -%}
         <a
-          href="{{ '/tag/' | append: tag_name | slugify | append: '/' | relative_url }}"
+          href="{{ '/tag/' | append: tag_slug | append: '/' | relative_url }}"
           rel="tag"
           >{{ tag_name }}</a
         >

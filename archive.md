@@ -5,7 +5,7 @@ title: Blog Archive
 
 {% for tag in site.tags %}
 
-### <a href="{{ '/tag/' | append: tag[0] | slugify | append: '/' | relative_url }}" rel="tag">{{ tag[0] }}</a>
+### [{{ tag[0] }}]({{ '/tag/' | append: tag[0] | slugify | append: '/' | relative_url }})
 
 {% for post in tag[1] %}
 
