@@ -43,3 +43,24 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+/* Tag badges */
+.post-tags {
+  margin-left: 0.6em;
+  font-size: 0.9em;
+  color: #666;
+}
+.post-tags a {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  margin-right: 0.25em;
+  background: #f1f1f1;
+  color: #333;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+.post-tags a:hover {
+  background: #e2e8f0;
+  color: #0b63a8;
+}
