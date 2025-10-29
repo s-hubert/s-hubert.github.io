@@ -1,3 +1,10 @@
+---
+layout: post
+title: 'A new era of computing - just matrix multiplication'
+date: 2025-10-27
+tags: [Compute]
+---
+
 ## A new era of computing - just matrix multiplication
 
 It's been a while since I did write a blog post - professionally and about technology. The question is, why write? Why now?
