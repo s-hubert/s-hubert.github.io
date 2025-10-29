@@ -1,6 +1,9 @@
-A blog on technical and technology-related topics.
-
 ---
+layout: default
+title: Home
+---
+
+A blog on technical and technology-related topics.
 
 ## Recent posts
 

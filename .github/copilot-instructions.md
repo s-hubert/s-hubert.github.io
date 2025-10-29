@@ -1,6 +1,6 @@
 <!-- .github/copilot-instructions.md for s-hubert.github.io -->
 
-This repository is a small personal Jekyll blog using the `minima` theme hosted on GitHub Pages. The instructions below focus on the repository layout, templating patterns, and concrete developer workflows so an AI coding agent can make accurate, minimal, and safe edits.
+This repository is a small personal Jekyll blog using the `minima` theme hosted on GitHub Page as described in here: https://raw.githubusercontent.com/jekyll/minima/refs/heads/master/README.md. The instructions below focus on the repository layout, templating patterns, and concrete developer workflows so an AI coding agent can make accurate, minimal, and safe edits.
 
 - Project type: Jekyll static site (Ruby/Jekyll). Key config: `_config.yml` (theme: `minima`, plugins: `jekyll-feed`, `jekyll-sitemap`).
 - Content: posts live in `_posts/` (standard Jekyll filenames). Draft-like content or post resources may appear under `_posts/_ideas/`.
