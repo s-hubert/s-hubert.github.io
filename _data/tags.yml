@@ -1,0 +1,16 @@
+# Site tags with descriptions
+Compute:
+  description: 'Posts about computing, algorithms, and computational thinking.'
+  display_name: 'Compute'
+
+'Fake Shop':
+  description: 'The fun category. Presenting products that I wish existed but seem not feasible - or maybe even exist without me knowing it. :-)'
+  display_name: 'Fake Shop'
+
+Collaboration:
+  description: 'Insights about working together, team dynamics, and collaborative tools.'
+  display_name: 'Collaboration'
+
+Corporation:
+  description: 'Analysis and thoughts about corporate structures, business strategies, and organizational development.'
+  display_name: 'Corporation'

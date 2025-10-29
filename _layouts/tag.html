@@ -2,62 +2,58 @@
 layout: base
 ---
 
-<main id="site-main" class="site-main">
-  <header class="page-head">
-    <h1>Posts tagged "{{ page.tag }}"</h1>
+<article class="tag-page">
+  <header class="tag-header">
+    {% assign tag_info = site.data.tags[page.tag] %}
+    <h1 class="tag-title">{{ tag_info.display_name | default: page.tag }}</h1>
+    {% if tag_info.description %}
+    <div class="tag-description">{{ tag_info.description }}</div>
+    {% endif %}
   </header>
 
-  {%- assign tag_posts = site.tags[page.tag] -%} {%- if tag_posts and
-  tag_posts.size > 0 -%} {%- assign posts = tag_posts | sort: 'date' | reverse
-  -%}
-  <ul class="post-list">
-    {%- for post in posts -%}
-    <li>
-      <span class="post-meta">
-        {{ post.date | date: site.minima.date_format }} {%- if post.tags.size >
-        0 -%}
-        <span class="post-tags">
-          {%- for tag in post.tags -%} {%- capture tag_name -%}{{ tag }}{%-
-          endcapture -%} {%- assign tag_slug = tag_name | slugify -%}
-          <a
-            href="{{ '/tag/' | append: tag_slug | append: '/' | relative_url }}"
-            rel="tag"
-            >{{ tag_name }}</a
-          >
-          {%- endfor -%}
-        </span>
-        {%- endif -%}
-      </span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}"
-          >{{ post.title | escape }}</a
-        >
-      </h3>
-      {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- else -%}
-  <p>No posts found for this tag.</p>
-  {%- endif -%}
-
-  <nav class="tag-cloud">
-    <h3>Other tags</h3>
-    <ul class="tag-list">
-      {%- assign all_tags = site.tags | sort_natural: 'first' -%} {%- for t in
-      all_tags -%} {%- assign tag_name = t[0] -%} {%- assign tag_slug = tag_name
-      | slugify -%}
+  {% assign tag_posts = site.tags[page.tag] %} {% if tag_posts and
+  tag_posts.size > 0 %} {% assign posts = tag_posts | sort: 'date' | reverse %}
+  <section class="tag-posts">
+    <ul class="post-list">
+      {% for post in posts %}
       <li>
+        <span class="post-meta"
+          >{{ post.date | date: site.minima.date_format }}</span
+        >
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}"
+            >{{ post.title | escape }}</a
+          >
+        </h3>
+        {% if site.show_excerpts %}
+        <div class="post-excerpt">{{ post.excerpt }}</div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% else %}
+  <p class="no-posts">No posts found for this tag.</p>
+  {% endif %}
+
+  <aside class="tag-navigation">
+    <h2>All Tags</h2>
+    <ul class="tag-list">
+      {% for tag in site.data.tags %} {% assign tag_slug = tag[0] | slugify %}
+      {% assign current = false %} {% if tag[0] == page.tag %} {% assign current
+      = true %} {% endif %}
+      <li {% if current %}class="current" {% endif %}>
         <a
           href="{{ '/tag/' | append: tag_slug | append: '/' | relative_url }}"
           rel="tag"
           class="tag-link"
         >
-          {{ tag_name }}
-          <span class="tag-count">({{ t[1].size }})</span>
+          {{ tag[1].display_name | default: tag[0] }} {% assign tag_count =
+          site.tags[tag[0]] | size %}
+          <span class="tag-count">({{ tag_count }})</span>
         </a>
       </li>
-      {%- endfor -%}
+      {% endfor %}
     </ul>
-  </nav>
-</main>
+  </aside>
+</article>
