@@ -39,7 +39,7 @@ defaults:
       path: ''
       type: post
     values:
-      tags: Other
+      tags: [Other]
 
 minima:
   show_excerpts: true

@@ -4,13 +4,11 @@ layout: base
 
 <article class="tag-page">
   <header class="tag-header">
-    {% assign tag_info = site.data.tags[page.tag] %}
-    <h1 class="tag-title">{{ tag_info.display_name | default: page.tag }}</h1>
-    {% if tag_info.description %}
-    <div class="tag-description">{{ tag_info.description }}</div>
+    <h1 class="tag-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <div class="tag-description">{{ page.description }}</div>
     {% endif %}
   </header>
-
   {% assign tag_posts = site.tags[page.tag] %} {% if tag_posts and
   tag_posts.size > 0 %} {% assign posts = tag_posts | sort: 'date' | reverse %}
   <section class="tag-posts">
@@ -39,12 +37,11 @@ layout: base
   <aside class="tag-navigation">
     <h2>All Tags</h2>
     <ul class="tag-list">
-      {% for tag in site.data.tags %} {% assign tag_slug = tag[0] | slugify %}
-      {% assign current = false %} {% if tag[0] == page.tag %} {% assign current
-      = true %} {% endif %}
+      {% for tag in site.data.tags %} {% assign current = false %} {% if tag[0]
+      == page.tag %} {% assign current = true %} {% endif %}
       <li {% if current %}class="current" {% endif %}>
         <a
-          href="{{ '/tag/' | append: tag_slug | append: '/' | relative_url }}"
+          href="{{ '/tag/' | append: tag[0] | append: '/' | relative_url }}"
           rel="tag"
           class="tag-link"
         >
