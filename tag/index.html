@@ -1,9 +1,9 @@
 ---
-layout: base
-permalink: /tag/:tag/
+layout: default
 ---
 
-{% assign tag = page.url | split: '/' | last %} {% assign tag_data =
+{% assign tag = page.url | split: '/' | last %} {% if tag == '' %}{% assign tag
+= page.url | split: '/' | slice: -2 | first %}{% endif %} {% assign tag_data =
 site.data.tags[tag] %}
 
 <article class="tag-page">
@@ -20,9 +20,7 @@ site.data.tags[tag] %}
     <ul class="post-list">
       {% for post in posts %}
       <li>
-        <span class="post-meta"
-          >{{ post.date | date: site.minima.date_format }}</span
-        >
+        <span class="post-meta">{{ post.date | date: "%d.%m.%Y" }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}"
             >{{ post.title | escape }}</a
@@ -36,11 +34,11 @@ site.data.tags[tag] %}
     </ul>
   </section>
   {% else %}
-  <p class="no-posts">No posts found for this tag.</p>
+  <p class="no-posts">Keine Beiträge für dieses Tag gefunden.</p>
   {% endif %}
 
   <aside class="tag-navigation">
-    <h2>All Tags</h2>
+    <h2>Alle Tags</h2>
     <ul class="tag-list">
       {% for tag_entry in site.data.tags %} {% assign current = false %} {% if
       tag_entry[0] == tag %}{% assign current = true %}{% endif %}
