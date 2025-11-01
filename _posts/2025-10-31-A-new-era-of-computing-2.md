@@ -1,4 +1,4 @@
----
+I---
 layout: post
 title: 	A new era of computing - faster horses
 date: 2025-10-27
@@ -19,7 +19,7 @@ To me, this means the follow is probably the future of computing and AI, I will 
 2. We succeeded in gaining huge productivity gains with agentic software, targetting individual domains with specific, classical workflows
 3. We struggled in building up the technical infrastructure (data centers and energy supply), but found ways to overcome resource shortages
 4. We ceeated the next phase of tge internet and social media, where everybody knows, it all fake, but still tempting to follow
-5. We will be surprised long-twrm about unpredictable effects of it all
+5. We will be surprised long-term about unpredictable effects of it all
 
 Whst do you think, could be those effects?
 
