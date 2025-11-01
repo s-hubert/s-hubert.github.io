@@ -1,0 +1,57 @@
+---
+layout: default
+title: Collaboration
+tag: collaboration
+description: Insights about working together, team dynamics, and collaborative tools.
+---
+
+<article class="tag-page">
+  <header class="tag-header">
+    <h1 class="tag-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <div class="tag-description">{{ page.description }}</div>
+    {% endif %}
+  </header>
+
+  {% assign tag_posts = site.tags[page.tag] %} {% if tag_posts and
+  tag_posts.size > 0 %} {% assign posts = tag_posts | sort: 'date' | reverse %}
+  <section class="tag-posts">
+    <ul class="post-list">
+      {% for post in posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%d.%m.%Y" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}"
+            >{{ post.title | escape }}</a
+          >
+        </h3>
+        {% if site.show_excerpts %}
+        <div class="post-excerpt">{{ post.excerpt }}</div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% else %}
+  <p class="no-posts">Keine Beiträge für dieses Tag gefunden.</p>
+  {% endif %}
+
+  <aside class="tag-navigation">
+    <h2>Alle Tags</h2>
+    <ul class="tag-list">
+      {% for tag in site.tags %} {% assign current = false %} {% if tag[0] ==
+      page.tag %}{% assign current = true %}{% endif %}
+      <li {% if current %}class="current" {% endif %}>
+        <a
+          href="{{ '/tag/' | append: tag[0] | append: '/' | relative_url }}"
+          rel="tag"
+          class="tag-link"
+        >
+          {{ tag[0] }}
+          <span class="tag-count">({{ tag[1].size }})</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+</article>
