@@ -1,11 +1,12 @@
-I---
+---
 layout: post
-title: 	A new era of computing - faster horses
+title: '	A new era of computing - faster horses' 
 date: 2025-10-27
-tags: Compute
+tags: [Compute] 
 ---
 
-# A new era of computing - faster horses
+
+## A new era of computing - faster horses
 
 In the advent of automobiles, a well-known saying from Henry Ford was, that if he listened to his customers, he would have built faster horses.
 
