@@ -1,16 +1,21 @@
 ---
 layout: base
+permalink: /tag/:tag/
 ---
+
+{% assign tag = page.url | split: '/' | last %} {% assign tag_data =
+site.data.tags[tag] %}
 
 <article class="tag-page">
   <header class="tag-header">
-    <h1 class="tag-title">{{ page.title }}</h1>
-    {% if page.description %}
-    <div class="tag-description">{{ page.description }}</div>
+    <h1 class="tag-title">{{ tag_data.display_name | default: tag }}</h1>
+    {% if tag_data.description %}
+    <div class="tag-description">{{ tag_data.description }}</div>
     {% endif %}
   </header>
-  {% assign tag_posts = site.tags[page.tag] %} {% if tag_posts and
-  tag_posts.size > 0 %} {% assign posts = tag_posts | sort: 'date' | reverse %}
+
+  {% assign tag_posts = site.tags[tag] %} {% if tag_posts and tag_posts.size > 0
+  %} {% assign posts = tag_posts | sort: 'date' | reverse %}
   <section class="tag-posts">
     <ul class="post-list">
       {% for post in posts %}
@@ -37,16 +42,16 @@ layout: base
   <aside class="tag-navigation">
     <h2>All Tags</h2>
     <ul class="tag-list">
-      {% for tag in site.data.tags %} {% assign current = false %} {% if tag[0]
-      == page.tag %} {% assign current = true %} {% endif %}
+      {% for tag_entry in site.data.tags %} {% assign current = false %} {% if
+      tag_entry[0] == tag %}{% assign current = true %}{% endif %}
       <li {% if current %}class="current" {% endif %}>
         <a
-          href="{{ '/tag/' | append: tag[0] | append: '/' | relative_url }}"
+          href="{{ '/tag/' | append: tag_entry[0] | append: '/' | relative_url }}"
           rel="tag"
           class="tag-link"
         >
-          {{ tag[1].display_name | default: tag[0] }} {% assign tag_count =
-          site.tags[tag[0]] | size %}
+          {{ tag_entry[1].display_name | default: tag_entry[0] }} {% assign
+          tag_count = site.tags[tag_entry[0]] | size %}
           <span class="tag-count">({{ tag_count }})</span>
         </a>
       </li>

@@ -1,1 +1,0 @@
-A category where fake products are presented that were good to have, but are not invented or mass-produced, mostly with AI-generated images and descriptions
