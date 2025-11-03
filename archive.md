@@ -8,8 +8,11 @@ title: Blog Archive
 {% assign tag_name = tag_entry[0] %}
 {% assign tag_data = tag_entry[1] %}
 {% assign tag_posts = site.tags[tag_name] %}
+{% assign tag_slug = tag_name | slugify %}
 
 ## {{ tag_name }}
+
+{: #{{ tag_slug }}}
 
 {% if tag_data.description %}
 {{ tag_data.description }}
