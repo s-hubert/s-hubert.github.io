@@ -9,10 +9,6 @@ A blog on technical and technology-related topics.
 
 {% for post in site.posts %}
 
-- {{ post.date | date: "%b %-d, %Y" }}
-  {%- if post.tags and post.tags.size > 0 -%}
-  (Tags: {%- for tag in post.tags -%}{%- assign tag_slug = tag | slugify -%}[{{ tag }}]({{ '/tag/' | append: tag_slug | append: '/' | relative_url }}){% unless forloop.last %}, {% endunless %}{%- endfor -%})
-  {%- endif -%}
-  — [{{ post.title }}]({{ post.url | relative_url }})
+- {{ post.date | date: "%b %-d, %Y" }} — [{{ post.title }}]({{ post.url | relative_url }})
 
 {% endfor %}

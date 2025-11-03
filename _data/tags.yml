@@ -1,0 +1,17 @@
+Architecture:
+  description: 'I.e. software architecture related topics.'
+
+Compute:
+  description: 'Posts about computing, algorithms, and computational thinking.'
+
+Collaboration:
+  description: 'Insights about working together, team dynamics, and collaborative tools.'
+
+Corporation:
+  description: 'Analysis and thoughts about corporate structures, business strategies, and organizational development.'
+
+AgenticDesignPatterns:
+  description: 'Design patterns and approaches for agentic systems and AI-driven architectures.'
+
+FakeShop:
+  description: 'Case studies and exploration of a fake shop project or similar initiatives.'
