@@ -7,10 +7,6 @@ tags: [AgenticDesignPatterns]
 
 ## Pattern: Parallelization Workflow
 
-This document provides a detailed breakdown of the Parallelization Workflow, a key design pattern in agentic AI systems. Following a classic design pattern template, it outlines the pattern's intent, structure, applicability, and implementation considerations, offering a comprehensive guide for system architects and engineers. The analysis is derived from established architectural principles and real-world applications in agentic design.
-
----
-
 ### 1. Pattern Name and Classification
 
 - **Pattern Name:** Parallelization Workflow
