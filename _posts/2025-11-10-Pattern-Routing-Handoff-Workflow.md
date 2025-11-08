@@ -1,4 +1,11 @@
-## Agentic AI Design Pattern: Routing and Handoff Workflow
+---
+layout: post
+title: 'Pattern: Routing and Handoff Workflow'
+date: 2025-11-10
+tags: [AgenticDesignPatterns]
+---
+
+## Pattern: Routing and Handoff Workflow
 
 ### 1. Pattern Name and Classification
 
