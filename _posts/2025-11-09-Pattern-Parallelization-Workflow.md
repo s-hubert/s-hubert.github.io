@@ -90,67 +90,67 @@ The following Python pseudocode provides a conceptual example of how the Paralle
 
 **_Disclaimer:_** _This is a high-level conceptual illustration, not a complete, runnable script._
 
-\`\`\`  
-\# Import necessary components from a conceptual agent framework like CrewAI  
+```python
+# Import necessary components from a conceptual agent framework like CrewAI
 from crewai import Agent, Task, Crew, Process
 
-\# \--- 1. Define Worker Agents for each research paper \---
+# --- 1. Define Worker Agents for each research paper ---
 
-\# Agent for analyzing the first paper  
-research_agent_1 \= Agent(  
- role='Research Analyst for Paper 1',  
- goal='Extract key findings and methodology from research paper 1.',  
- verbose=True,  
- \# Additional agent configuration...  
+# Agent for analyzing the first paper
+research_agent_1 = Agent(
+ role='Research Analyst for Paper 1',
+ goal='Extract key findings and methodology from research paper 1.',
+ verbose=True,
+ # Additional agent configuration...
 )
 
-\# Agent for analyzing the second paper  
-research_agent_2 \= Agent(  
- role='Research Analyst for Paper 2',  
- goal='Extract key findings and methodology from research paper 2.',  
- verbose=True,  
- \# Additional agent configuration...  
+# Agent for analyzing the second paper
+research_agent_2 = Agent(
+ role='Research Analyst for Paper 2',
+ goal='Extract key findings and methodology from research paper 2.',
+ verbose=True,
+ # Additional agent configuration...
 )
 
-\# \--- 2. Define the independent tasks for each agent \---
+# --- 2. Define the independent tasks for each agent ---
 
-\# Task for the first agent  
-task_1 \= Task(  
- description='Analyze the provided text of research paper 1 and summarize its main contributions.',  
- agent=research_agent_1,  
- \# Assume paper_1_content is passed as input  
+# Task for the first agent
+task_1 = Task(
+ description='Analyze the provided text of research paper 1 and summarize its main contributions.',
+ agent=research_agent_1,
+ # Assume paper_1_content is passed as input
 )
 
-\# Task for the second agent  
-task_2 \= Task(  
- description='Analyze the provided text of research paper 2 and summarize its main contributions.',  
- agent=research_agent_2,  
- \# Assume paper_2_content is passed as input  
+# Task for the second agent
+task_2 = Task(
+ description='Analyze the provided text of research paper 2 and summarize its main contributions.',
+ agent=research_agent_2,
+ # Assume paper_2_content is passed as input
 )
 
-\# \--- 3. Form the Crew and specify parallel execution \---
+# --- 3. Form the Crew and specify parallel execution ---
 
-\# The Crew object orchestrates the agents and tasks.  
-\# Setting process=Process.parallel ensures tasks are run simultaneously.  
-research_crew \= Crew(  
- agents=\[research_agent_1, research_agent_2\],  
- tasks=\[task_1, task_2\],  
- process=Process.parallel \# This is the key for parallelization  
+# The Crew object orchestrates the agents and tasks.
+# Setting process=Process.parallel ensures tasks are run simultaneously.
+research_crew = Crew(
+ agents=[research_agent_1, research_agent_2],
+ tasks=[task_1, task_2],
+ process=Process.parallel # This is the key for parallelization
 )
 
-\# \--- 4. Execute the workflow \---
+# --- 4. Execute the workflow ---
 
-\# The kickoff method would trigger the parallel execution.  
-\# The framework would handle collecting results, which then need to be synthesized.  
-parallel_results \= research_crew.kickoff(inputs={  
- 'paper_1_content': "...",  
- 'paper_2_content': "..."  
+# The kickoff method would trigger the parallel execution.
+# The framework would handle collecting results, which then need to be synthesized.
+parallel_results = research_crew.kickoff(inputs={
+ 'paper_1_content': "...",
+ 'paper_2_content': "..."
 })
 
-\# A separate "Synthesizer Function" would then process 'parallel_results'  
-\# to create the final consolidated report.  
-\# print(final_report)  
-\`\`\`
+# A separate "Synthesizer Function" would then process 'parallel_results'
+# to create the final consolidated report.
+# print(final_report)
+```
 
 ### 12. Known Uses
 
