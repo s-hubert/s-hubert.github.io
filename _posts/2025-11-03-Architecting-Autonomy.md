@@ -46,9 +46,7 @@ In multi-agent systems, particularly those relying on heterogeneous LLMs to achi
 
 The collaboration is structured in phases to ensure a robust result:
 
-1.  **Agent Action:** Agents generate new answers or cast votes asynchronously.
-2.  **Consensus:** A winner is selected based on majority votes in the latest answer set.
-3.  **Final Presentation:** The winning agent synthesizes the comprehensive final answer, integrating feedback and reasoning from all participants, thereby reaching the desired final result.
+1.**Agent Action:** Agents generate new answers or cast votes asynchronously. 2.**Consensus:** A winner is selected based on majority votes in the latest answer set. 3.**Final Presentation:** The winning agent synthesizes the comprehensive final answer, integrating feedback and reasoning from all participants, thereby reaching the desired final result.
 
 By adopting these organizational paradigms, developers gain a proven architectural vocabulary for building robust, scalable AI systems where complexity is managed through defined roles, hierarchies, and interaction protocols.
 

@@ -103,10 +103,10 @@ The implementation typically follows this adaptive execution loop:
 2. Tool Provisioning: The agent is given access to a defined set of external tools and integrations.
 3. Adaptive Execution Loop: The agent continuously cycles through:
 
-- Assessing its current state against the overall goal.
-- Using the LLM to predict the most logical next action or tool to use.
-- Executing the predicted action and observing the outcome.
-- Updating its internal state and memory with the new information.
+   - Assessing its current state against the overall goal.
+   - Using the LLM to predict the most logical next action or tool to use.
+   - Executing the predicted action and observing the outcome.
+   - Updating its internal state and memory with the new information.
 
 4. Iterative Refinement: The implementation supports "gradient configuration," allowing its behavior to be improved over time with natural language feedback from a domain expert, rather than requiring code changes.
 
