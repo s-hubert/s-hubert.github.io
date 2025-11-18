@@ -21,8 +21,20 @@ tags: [AgenticDesignPatterns]
     *   You want to build a reactive, event-driven system where agents can be added or removed dynamically without affecting the core logic.
 5.  **Structure:**
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```mermaid
+info
+```
+
     ```mermaid
-    graph TD
+    graph TD;
         subgraph Setup Phase
             ObserverAgentA[Observer Agent A] -- "Subscribes to" --> SharedContext{Shared Context}
             ObserverAgentB[Observer Agent B] -- "Subscribes to" --> SharedContext
