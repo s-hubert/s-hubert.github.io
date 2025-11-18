@@ -5,7 +5,7 @@ date: 2025-11-18
 tags: [AgenticDesignPatterns]
 ---
 
-### Agentic AI Pattern: Shared Context Observer
+## Agentic AI Pattern: Shared Context Observer
 
 1.  **Pattern Name:** Shared Context Observer
 2.  **Intent:** To enable multiple, independent agents to react to changes in a shared state or environment without being tightly coupled to the agent or event that caused the change. This pattern establishes a one-to-many dependency where a state change in one object (the context) automatically notifies all dependent agents.
