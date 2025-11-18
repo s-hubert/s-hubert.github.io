@@ -5,7 +5,7 @@ date: 2025-11-18
 tags: [AgenticDesignPatterns]
 ---
 
-## Agentic AI Pattern: Shared Context Observer
+## Pattern: Shared Context Observer
 
 1.  **Pattern Name:** Shared Context Observer
 2.  **Intent:** To enable multiple, independent agents to react to changes in a shared state or environment without being tightly coupled to the agent or event that caused the change. This pattern establishes a one-to-many dependency where a state change in one object (the context) automatically notifies all dependent agents.
@@ -72,8 +72,13 @@ tags: [AgenticDesignPatterns]
 
 ## References
 [1] Refactoring.Guru. (n.d.). *Design Patterns*. Retrieved from https://refactoring.guru/design-patterns
+
 [2] Thoughtworks. (2017). *Evolutionary Architecture*. Retrieved from https://www.thoughtworks.com/insights/articles/evolutionary-architecture.html
+
 [3] Hohpe, G., & Woolf, B. (n.d.). *Enterprise Integration Patterns*. Retrieved from https://www.enterpriseintegrationpatterns.com/
+
 [4] Fowler, M. (2014). *Bounded Context*. Retrieved from https://martinfowler.com/bliki/BoundedContext.html
+
 [5] Fowler, M. (2017). *Event-Driven Architecture*. Retrieved from https://martinfowler.com/articles/enterpriseIntegrationPatterns/EventDrivenArchitecture.html
+
 [6] Fowler, M. (2011). *Command Query Responsibility Segregation (CQRS)*. Retrieved from https://martinfowler.com/bliki/CQRS.html

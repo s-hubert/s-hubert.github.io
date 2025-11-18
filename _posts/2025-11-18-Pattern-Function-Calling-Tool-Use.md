@@ -5,7 +5,7 @@ date: 2025-11-18
 tags: [AgenticDesignPatterns]
 ---
 
-## Agentic AI Pattern: Function Calling (Tool Use)
+## Pattern: Function Calling (Tool Use)
 
 This pattern enables AI agents to extend their capabilities by interacting with external functions and services, as demonstrated by models like Anthropic's Claude [1](https://www.anthropic.com/news/claude-tool-use).
 
