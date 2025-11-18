@@ -22,34 +22,22 @@ tags: [AgenticDesignPatterns]
 5.  **Structure:**
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph TD
+    subgraph Setup Phase
+        ObserverAgentA[Observer Agent A] -- "Subscribes to" --> SharedContext{Shared Context}
+        ObserverAgentB[Observer Agent B] -- "Subscribes to" --> SharedContext
+        ObserverAgentC[Observer Agent C] -- "Subscribes to" --> SharedContext
+    end
+
+    subgraph Runtime Phase
+        ActorAgent[Actor Agent] -- "1. Updates State" --> SharedContext
+        SharedContext -- "2. Notifies Subscribers" --> ObserverAgentA
+        SharedContext -- "2. Notifies Subscribers" --> ObserverAgentB
+        SharedContext -- "2. Notifies Subscribers" --> ObserverAgentC
+        ObserverAgentA -- "3. Reacts to Change" --> ActionA((Perform Action A))
+        ObserverAgentB -- "3. Reacts to Change" --> ActionB((Perform Action B))
+    end
 ```
-
-```mermaid
-info
-```
-
-    ```mermaid
-    graph TD;
-        subgraph Setup Phase
-            ObserverAgentA[Observer Agent A] -- "Subscribes to" --> SharedContext{Shared Context}
-            ObserverAgentB[Observer Agent B] -- "Subscribes to" --> SharedContext
-            ObserverAgentC[Observer Agent C] -- "Subscribes to" --> SharedContext
-        end
-
-        subgraph Runtime Phase
-            ActorAgent[Actor Agent] -- "1. Updates State" --> SharedContext
-            SharedContext -- "2. Notifies Subscribers" --> ObserverAgentA
-            SharedContext -- "2. Notifies Subscribers" --> ObserverAgentB
-            SharedContext -- "2. Notifies Subscribers" --> ObserverAgentC
-            ObserverAgentA -- "3. Reacts to Change" --> ActionA((Perform Action A))
-            ObserverAgentB -- "3. Reacts to Change" --> ActionB((Perform Action B))
-        end
-    ```
 
 6.  **Participants:**
     *   **Shared Context (Subject):** A central component that maintains the shared state of interest. It keeps a list of its subscribers (observers) and provides an interface for attaching and detaching them. When its state changes, it notifies all registered observers.
