@@ -17,13 +17,6 @@ Important patterns and examples
 - Custom CSS lives in `css/override.css` and is explicitly included from layouts. Prefer small augmentations there.
 - Social/share buttons are implemented inline in `_includes/sharelinks.html` and use Liquid to build encoded URLs (`safeurl`, `safetitle`). If changing behavior, update both the markup and any related JS/CSS.
 
-Build and local testing (discoverable commands)
-
-- This repo doesn't include a CI workflow or Gemfile. Typical local steps:
-  - Install Ruby and Jekyll (platform-specific).
-  - From the repo root run: `jekyll serve --livereload` to build and preview locally.
-  - Because the site uses `minima` theme, ensure Jekyll can fetch the theme gem or use `bundle` if you add a Gemfile.
-
 Conventions and constraints
 
 - Posts use standard Jekyll front matter and Liquid filters (see `_layouts/post.html`). Keep existing Liquid tags (e.g., `relative_url`, `url_encode`, `date_to_xmlschema`).
