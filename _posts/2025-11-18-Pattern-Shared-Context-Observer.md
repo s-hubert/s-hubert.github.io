@@ -21,7 +21,7 @@ tags: [AgenticDesignPatterns]
     *   You want to build a reactive, event-driven system where agents can be added or removed dynamically without affecting the core logic.
 5.  **Structure:**
 
-```mermaid
+<pre class="mermaid">
 graph TD
     subgraph Setup Phase
         ObserverAgentA[Observer Agent A] -- "Subscribes to" --> SharedContext{Shared Context}
@@ -37,7 +37,7 @@ graph TD
         ObserverAgentA -- "3. Reacts to Change" --> ActionA((Perform Action A))
         ObserverAgentB -- "3. Reacts to Change" --> ActionB((Perform Action B))
     end
-```
+</pre>
 
 6.  **Participants:**
     *   **Shared Context (Subject):** A central component that maintains the shared state of interest. It keeps a list of its subscribers (observers) and provides an interface for attaching and detaching them. When its state changes, it notifies all registered observers.

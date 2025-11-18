@@ -19,17 +19,17 @@ This pattern enables AI agents to extend their capabilities by interacting with 
     *   Ground its responses in factual, external data to reduce hallucination [1](https://www.anthropic.com/news/claude-tool-use).
 5.  **Structure:**
 
-    ```mermaid
-    graph TD
-        User[User Prompt] --> Agent[AI Agent / LLM]
-        Agent -- "1. Identifies need for tool & parameters" --> ToolOrchestrator[Tool Orchestrator]
-        ToolOrchestrator -- "2. Queries for tool definition" --> ToolRegistry[Tool Registry]
-        ToolRegistry -->|Tool Schema| ToolOrchestrator
-        ToolOrchestrator -- "3. Invokes with parameters" --> ExternalTool[External Tool/API]
-        ExternalTool -->|Result| ToolOrchestrator
-        ToolOrchestrator -- "4. Provides result to Agent" --> Agent
-        Agent -- "5. Generates final response" --> User[User Response]
-    ```
+<pre class="mermaid">
+graph TD
+    User[User Prompt] --> Agent[AI Agent / LLM]
+    Agent -- "1. Identifies need for tool & parameters" --> ToolOrchestrator[Tool Orchestrator]
+    ToolOrchestrator -- "2. Queries for tool definition" --> ToolRegistry[Tool Registry]
+    ToolRegistry -->|Tool Schema| ToolOrchestrator
+    ToolOrchestrator -- "3. Invokes with parameters" --> ExternalTool[External Tool/API]
+    ExternalTool -->|Result| ToolOrchestrator
+    ToolOrchestrator -- "4. Provides result to Agent" --> Agent
+    Agent -- "5. Generates final response" --> User[User Response]
+</pre>
 
 6.  **Participants:**
     *   **AI Agent (LLM):** The core intelligent entity responsible for understanding user intent, reasoning, and generating responses. It identifies when external tools are required and determines the necessary parameters.
