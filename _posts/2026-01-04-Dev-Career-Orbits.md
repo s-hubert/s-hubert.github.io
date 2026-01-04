@@ -37,6 +37,8 @@ Finally, in an established corporation, you may have the opportunity to work on 
 
 ![Dev Career Orbits in Different Environments](/images/devcareerorbits.jpg)
 
+Now try to spot your position in the model and where you want to go next. Following, are some example orbits.
+
 ### Examples
 
 TechDebt Specialist: Orbits between Technology and Process, focusing on identifying and mitigating technical debt within software systems. It conflicts with Business as reducing tech debt often requires upfront investment without immediate business value.
