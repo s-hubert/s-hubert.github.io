@@ -9,7 +9,7 @@ tags: [Corporation]
 
 Overhearing a conversation with Code Complete author Steve McConnell and Gergely Orosz on the podcast [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/code-complete-with-steve-mcconnell), I was reminded of the missing mindset of developer career paths, except for those designed by HR departments which are mostly generic in nature and never really tailored to software developers or related technical roles. Steve described how developers often get stuck in a "code monkey" role or struggle as managers, unable to break free and advance their careers. This resonated with me, as I've seen many talented developers struggle to find their way in the industry.
 
-To address this, I propose the concept of "Dev Career Orbits," a framework that outlines various career dimensions for developers, from individual contributors to leadership roles. This framework can help developers visualize their career paths and identify opportunities for growth and advancement.
+To address this, I propose the concept of "Dev Career Orbits," a framework that outlines various career dimensions for developers, from individual contributors to leadership roles. This framework can help developers visualize their career paths and identify opportunities for growth and advancement. Just a hint: as with any model, this is a simplification of reality - there're always exceptions to the rules.
 
 ### The Dev Career Orbits Framework
 
@@ -36,6 +36,16 @@ Later in your career, you may find yourself in a scale-up company. As the compan
 Finally, in an established corporation, you may have the opportunity to work on large-scale projects and collaborate with cross-functional teams. You may also have access to more resources and support for professional development. To succeed in this environment, you need to be able to navigate complex organizational structures and work effectively with stakeholders at all levels. In our orbit model, you may find yourself orbiting even further out, focusing on a specific area of expertise while still maintaining a broad understanding of the business and technology landscape.
 
 ![Dev Career Orbits in Different Environments](/images/devcareerorbits.jpg)
+
+### Examples
+
+TechDebt Specialist: Orbits between Technology and Process, focusing on identifying and mitigating technical debt within software systems. It conflicts with Business as reducing tech debt often requires upfront investment without immediate business value.
+
+Manager: Orbits between People and Business, leading teams to achieve business objectives. It conflicts with Technology as managers may prioritize business goals over technical excellence. It may however, cause a previously techonical individual contributor to move closer to the center of the model, becoming more of a generalist or dismiss the management position to return into a individual contributor role.
+
+Architect: Orbits between Technology and Business, designing systems that align with business goals. It may conflict with Process as architects may prioritize innovation over established best practices.
+
+Quality Advocate: Orbits between Process and People, promoting quality practices within development teams. It may conflict with Technology as quality advocates may push for rigorous testing and documentation that developers see as slowing down technical innovation.
 
 ### Conclusion
 
