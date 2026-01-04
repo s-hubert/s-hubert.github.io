@@ -1,7 +1,7 @@
 ---
-layout: default
-title: "Dev Career Orbits: Navigating Your Path in Software Development"
-date: 2026-01-04 09:00:00 -0500
+layout: post
+title: 'Dev Career Orbits: Navigating Your Path in Software Development' 
+date: 2026-01-04
 tags: [Corporation]
 ---
 
