@@ -1,3 +1,9 @@
+---
+layout: post
+title: 'Feature Complete: The Art of System Synthesis' 
+date: 2026-01-06
+tags: [Architecture,FakeShop]
+---
 
 # Feature Complete: The Art of System Synthesis
 
