@@ -52,7 +52,7 @@ Anthropic’s eval work, OpenAI’s harness engineering lessons, and real-world 
 
 In practical terms, the loop looks like this:
 
-```mermaid
+<pre class="mermaid">
 flowchart LR
   A[Intent / Acceptance Criteria] --> B[Agent Generates Change]
   B --> C[Deterministic Verification<br/>tests, lint, type, security]
@@ -67,7 +67,7 @@ flowchart LR
   I --> J[Production Monitoring]
   J --> K[Convert Incidents into New Eval Cases]
   K --> A
-```
+</pre>
 
 A loop is “closed” when production failures feed back into the eval suite, so the same class of failure is less likely to recur.
 
