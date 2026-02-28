@@ -146,3 +146,20 @@ It is:
 > “How quickly can we learn whether a shipped feature is valuable, usable, reliable, and maintainable—and feed that learning back into the next cycle?”
 
 That is what it means to extend the loop.
+
+---
+
+## Bibliography
+- [1] [Discovery vs. Delivery — Marty Cagan (SVPG)](https://www.svpg.com/discovery-vs-delivery/)
+- [2] [When to Use Which User-Experience Research Methods — Nielsen Norman Group](https://www.nngroup.com/articles/which-ux-research-methods/)
+- [3] [Usability (User) Testing 101 — Nielsen Norman Group](https://www.nngroup.com/articles/usability-testing-101/)
+- [4] [Trunk-Based Development](https://trunkbaseddevelopment.com/)
+- [5] [DORA’s Software Delivery Performance Metrics](https://dora.dev/guides/dora-metrics-four-keys/)
+- [6] [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [7] [Consumer-Driven Contracts: A Service Evolution Pattern — Martin Fowler](https://martinfowler.com/articles/consumerDrivenContracts.html)
+- [8] [Architectural Decision Records (ADR) — adr.github.io](https://adr.github.io/)
+- [9] [NIST SP 800-218: Secure Software Development Framework (SSDF) Version 1.1](https://csrc.nist.gov/pubs/sp/800/218/final)
+- [10] [SLSA Framework](https://slsa.dev/)
+- [11] [Software Bill of Materials (SBOM) — NTIA](https://www.ntia.gov/SBOM)
+- [12] [OpenSSF Scorecard](https://github.com/ossf/scorecard)
+- [13] [DORA Research Program](https://dora.dev/)
