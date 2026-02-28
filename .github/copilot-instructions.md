@@ -43,8 +43,7 @@ Files to reference when working on PRs
 - `js/highlightjs/` — syntax highlighting bundle
 
 Mermaid diagrams
-- Mermaid diagrams are used in posts for visual explanations. They are rendered client-side using the included `highlight.min.js` and language files. If adding or modifying diagrams, ensure they are properly fenced and that any new dependencies are included in `_includes/head.html`.
-- When adding code blocks, use fenced `<pre class="mermaid"` tags for proper syntax highlighting. For example:
+- Mermaid diagrams are used in posts for visual explanations. Use `<pre class="mermaid"` tags for proper rendering. For example:
 ```markdown
 <pre class="mermaid">
 graph TD
