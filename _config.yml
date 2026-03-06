@@ -43,3 +43,19 @@ defaults:
 
 minima:
   show_excerpts: true
+
+giscus:
+  enabled: true
+  repo: 's-hubert/s-hubert.github.io'
+  # Fill these IDs from https://giscus.app/ after selecting the repository and discussion category.
+  repo_id: 'R_kgDOQKJZnQ'
+  category: 'Announcements'
+  category_id: 'DIC_kwDOQKJZnc4C31Uy'
+  mapping: 'title'
+  strict: '0'
+  reactions_enabled: '1'
+  emit_metadata: '0'
+  input_position: 'top'
+  theme: 'light'
+  lang: 'en'
+  loading: 'lazy'

@@ -206,3 +206,7 @@ hr {
   font-size: 0.85em;
   color: #666;
 }
+
+.post-comments {
+  margin-top: 3rem;
+}
