@@ -42,6 +42,22 @@ Files to reference when working on PRs
 - `css/override.css` — repo-specific styling
 - `js/highlightjs/` — syntax highlighting bundle
 
+Mermaid diagrams
+- Mermaid diagrams are used in posts for visual explanations. Use `<pre class="mermaid"` tags for proper rendering. For example:
+```markdown
+<pre class="mermaid">
+graph TD
+    User[User Prompt] --> Agent[AI Agent / LLM]
+    Agent -- "1. Identifies need for tool & parameters" --> ToolOrchestrator[Tool Orchestrator]
+    ToolOrchestrator -- "2. Queries for tool definition" --> ToolRegistry[Tool Registry]
+    ToolRegistry -->|Tool Schema| ToolOrchestrator
+    ToolOrchestrator -- "3. Invokes with parameters" --> ExternalTool[External Tool/API]
+    ExternalTool -->|Result| ToolOrchestrator
+    ToolOrchestrator -- "4. Provides result to Agent" --> Agent
+    Agent -- "5. Generates final response" --> User[User Response]
+</pre>
+```
+
 If anything is ambiguous, ask the repo owner exactly which runtime/build approach they prefer (Gemfile/bundle vs. system gem). Also confirm whether you may add CI or a Gemfile before creating one.
 
 End of file.
